@@ -11,7 +11,7 @@ import io
 load_dotenv()
 
 def initialize():
-    api_key = os.getenv("OPEN_API_KEY")
+    api_key = os.getenv("OPENAI_API_KEY")
     llm = LiteLLM(model="gpt-4o-mini", api_key=api_key)
 
     pai.config.set({
