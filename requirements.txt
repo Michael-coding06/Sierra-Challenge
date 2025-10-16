@@ -1,7 +1,6 @@
 streamlit
 scipy>=1.12
-pandasai
-pandasai-litellm
+pandasai>=3.0.0
 supabase
 python-dotenv
 Pillow
