@@ -1,6 +1,7 @@
 streamlit
 scipy == 1.10.1
 pandasai>=3.0.0
+pandasai_litellm
 supabase
 python-dotenv
 Pillow
