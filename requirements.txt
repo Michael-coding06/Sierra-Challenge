@@ -1,6 +1,4 @@
 streamlit
-scipy
-pandas
 pandasai
 pandasai-litellm
 supabase
