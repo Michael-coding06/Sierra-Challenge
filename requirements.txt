@@ -1,0 +1,7 @@
+streamlit
+pandas
+pandasai
+pandasai-litellm
+supabase
+python-dotenv
+Pillow
