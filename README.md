@@ -85,7 +85,6 @@ App/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd data-lens
    ```
 
 2. **Install dependencies**
