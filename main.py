@@ -6,6 +6,7 @@ import base64
 from PIL import Image
 from bot import chat_with_data
 from supabase import create_client, Client
+from security import DOS_prevention
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
@@ -28,9 +29,14 @@ def main_page(username):
 
     uploaded_files = st.file_uploader(
         "Choose a file (xls/csv)",
-        type=["csv", "xls", "xlsx"],
+        type=["csv", "xls"],
         accept_multiple_files=True
-    )
+    ) ## extension validation
+
+    for file in uploaded_files:
+        if(not DOS_prevention(file, 50)):
+            st.warning("Uploaded file is too larged")
+            st.stop()
 
     if uploaded_files:
         files = [file.name for file in uploaded_files]
